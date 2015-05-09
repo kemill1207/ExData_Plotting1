@@ -18,7 +18,8 @@ par(mfrow = c(2,2))
 plot(data$Date_Time, data$Global_active_power, type = "l", main = "", xlab = "", 
      ylab = "Global Active Power (kilowatts)")
 
-plot(data$Date_Time, data$Voltage, type = "l", main = "", xlab = "", ylab = "Voltage")
+plot(data$Date_Time, data$Voltage, type = "l", main = "", xlab = "datetime", 
+     ylab = "Voltage")
 
 plot(data$Date_Time, data$Sub_metering_1, type = "n", main = "", xlab = "", 
      ylab = "Energy sub metering")
@@ -26,9 +27,9 @@ lines(data$Date_Time, data$Sub_metering_1, type = "l", col = "black")
 lines(data$Date_Time, data$Sub_metering_2, type = "l", col = "red")
 lines(data$Date_Time, data$Sub_metering_3, type = "l", col = "blue")
 legend("topright", col = c("black", "red", "blue"), lty = 1,
-       legend = c("Sub-metering 1", "Sub-metering 2", "Sub-metering 3"))
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
-plot(data$Date_Time, data$Global_reactive_power, type = "l", main = "", xlab = "",
-     ylab = "Global Reactive Power (kilowatts)")
+plot(data$Date_Time, data$Global_reactive_power, type = "l", main = "", 
+     xlab = "datetime", ylab = "Global_reactive_power")
 
 dev.off()

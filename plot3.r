@@ -20,6 +20,6 @@ lines(data$Date_Time, data$Sub_metering_1, type = "l", col = "black")
 lines(data$Date_Time, data$Sub_metering_2, type = "l", col = "red")
 lines(data$Date_Time, data$Sub_metering_3, type = "l", col = "blue")
 legend("topright", col = c("black", "red", "blue"), lty = 1,
-       legend = c("Sub-metering 1", "Sub-metering 2", "Sub-metering 3"))
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 dev.off()
